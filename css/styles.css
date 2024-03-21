@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/specimen/DM+Sans');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 /* Reset some default styles */
 body,
@@ -19,11 +19,11 @@ a {
 
 * {
     box-sizing: border-box;
+    font-family: "DM Sans";
 }
 
 /* Add some styles for body*/
 body {
-    font-family: 'DM Sans';
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -81,6 +81,20 @@ body {
     border-bottom: 2px solid #394150;
 }
 
+.button-lang {
+    color: #4D5562;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+}
+
+.second-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .translate-input {
     background-color: transparent;
     border: none;
@@ -111,11 +125,26 @@ body {
     border-radius: 10px;
 }
 
-.translate-button {
-    padding: 6px;
+.change-button {
+    padding: 4px;
+    border: 2px solid #4D5562;
     border-radius: 10px;
+}
+
+.translate-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #F9FAFB;
     background-color: #3662E3;
     border: 1px solid #7CA9F3;
+}
+
+.translate-button img {
+    margin-right: 10px;
 }
 
 .translate-button:hover {
