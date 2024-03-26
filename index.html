@@ -14,18 +14,23 @@
         <img class="logo" src="images/logo.svg" alt="logo">
         <div class="languages-container">
             <div class="box-language first-box-language">
-                <div class="top-bar">
-                    <button class="button-lang">Detect Language</button>
-                    <button class="button-lang">English</button>
-                    <button class="button-lang">French</button>
+                <div id="translation-filter" class="top-bar">
+                    <button class="button-lang" data-filter="detect-language">Detect Language</button>
+                    <button class="button-lang is-checked" data-filter="en">English</button>
+                    <button class="button-lang" data-filter="fr">French</button>
+                    <button class="button-lang" data-filter="es">Spanish</button>
                 </div>
                 <textarea id="first-translate-input" class="translate-input first-translate-input"
                     name="first-translate-input" maxlength="500">Hello, how are you?</textarea>
                 <div class="count-translation"><span id="count-translation-textarea"></span><span>/500</span></div>
                 <div class="bot-buttons">
                     <div class="bot-buttons-left">
-                        <img class="sound-button" src="images/sound_max_fill.svg" alt="sound">
-                        <img class="copy-button" src="images/Copy.svg" alt="copy">
+                        <button class="sound-button-style" id="sound-button-translation">
+                            <img class="sound-button" src="images/sound_max_fill.svg" alt="sound">
+                        </button>
+                        <button class="copy-button-style" id="copy-button-translation">
+                            <img class="copy-button" src="images/Copy.svg" alt="copy">
+                        </button>
                     </div>
                     <button id="translate-button" class="translate-button">
                         <img src="images/Sort_alfa.svg" alt="translate">
@@ -35,18 +40,24 @@
             </div>
             <div class="box-language second-box-language">
                 <div class="top-bar second-top-bar">
-                    <div>
-                        <button class="button-lang">English</button>
-                        <button class="button-lang">French</button>
-                        <button class="button-lang">Spanish</button>
+                    <div id="translated-filter">
+                        <button class="button-lang" data-filter="en">English</button>
+                        <button class="button-lang is-checked" data-filter="fr">French</button>
+                        <button class="button-lang" data-filter="es">Spanish</button>
                     </div>
-                    <img class="change-button" src="images/Horizontal_top_left_main.svg" alt="change">
+                    <button id="change-lang-button">
+                        <img class="change-button" src="images/Horizontal_top_left_main.svg" alt="change">
+                    </button>
                 </div>
                 <textarea id="second-translate-input" class="translate-input second-translate-input"
                     name="second-translate-input" maxlength="500"></textarea>
                 <div class="second-bot-buttons">
-                    <img class="sound-button" src="images/sound_max_fill.svg" alt="sound">
-                    <img class="copy-button" src="images/Copy.svg" alt="copy">
+                    <button class="sound-button-style" id="sound-button-translated">
+                        <img class="sound-button" src="images/sound_max_fill.svg" alt="sound">
+                    </button>
+                    <button class="copy-button-style" id="copy-button-translated">
+                        <img class="copy-button" src="images/Copy.svg" alt="copy">
+                    </button>
                 </div>
             </div>
         </div>

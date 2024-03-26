@@ -79,7 +79,7 @@ body {
 }
 
 .top-bar {
-    padding: 16px 0;
+    padding: 8px 0 16px 0;
     border-bottom: 1px solid #394150;
 }
 
@@ -87,8 +87,17 @@ body {
     color: #4D5562;
     font-size: 14px;
     font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
     background-color: transparent;
     border: none;
+}
+
+.button-lang:active,
+.button-lang.is-checked {
+    background-color: #4D5562;
+    color: #F9FAFB;
 }
 
 .second-top-bar {
@@ -118,6 +127,15 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+.sound-button-style,
+.copy-button-style,
+#change-lang-button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
 }
 
 .bot-buttons-left,
