@@ -50,17 +50,17 @@ window.onload = function () {
 
         for (let i = 0; i < document.querySelector("#translation-filter").querySelectorAll('.button-lang').length; i++) {
             if (translatedFilter === document.querySelector("#translation-filter").querySelectorAll('.button-lang')[i].getAttribute('data-filter')) {
-                document.querySelector("#translated-filter").querySelectorAll('.is-checked')[0].classList.remove('is-checked');
-                document.querySelector("#translation-filter").querySelectorAll('.button-lang')[i].classList.toggle('is-checked');
+                document.querySelector("#translation-filter").querySelectorAll('.is-checked')[0].classList.remove('is-checked');
+                document.querySelector("#translation-filter").querySelectorAll('.button-lang')[i].classList.add('is-checked');
             }
         }
-
         for (let i = 0; i < document.querySelector("#translated-filter").querySelectorAll('.button-lang').length; i++) {
             if (translationFilter === document.querySelector("#translated-filter").querySelectorAll('.button-lang')[i].getAttribute('data-filter')) {
-                document.querySelector("#translation-filter").querySelectorAll('.is-checked')[0].classList.remove('is-checked');
-                document.querySelector("#translated-filter").querySelectorAll('.button-lang')[i].classList.toggle('is-checked');
+                document.querySelector("#translated-filter").querySelectorAll('.is-checked')[0].classList.remove('is-checked');
+                document.querySelector("#translated-filter").querySelectorAll('.button-lang')[i].classList.add('is-checked');
             }
         }
+        transaltionFunction(translationText);
     }
     copyButtonTranslation.onclick = function () {
         copyText("first-translate-input");
@@ -89,6 +89,7 @@ window.onload = function () {
                 document.querySelector("#" + id).querySelectorAll('.is-checked')[0].classList.remove('is-checked');
             }
             $this.classList.toggle('is-checked');
+            transaltionFunction(translationText);
         });
     }
     filterLanguage('translation-filter');
